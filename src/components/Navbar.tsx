@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,6 +36,7 @@ const Navbar = () => {
 
         
         <div className="hidden lg:flex items-center space-x-4">
+          <Link href='/write' > Write </Link> 
           <button className="text-sm font-medium text-gray-800">Login</button>
           <button className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
             Join Free
