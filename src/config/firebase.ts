@@ -6,14 +6,14 @@ import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    projectId: process.env.PROJECT_ID,
-    storageBucket: process.env.STORAGE_BUCKET,
-    messagingSenderId: process.env.MESSAGING_SENDER_ID,
-    appId: process.env.APP_ID,
+ 
     
-    
+    apiKey: "AIzaSyA8kU-l48NS1sl8P_dGw9xPD9FoBGoiH6g",
+    authDomain: "fir-9d913.firebaseapp.com",
+    projectId: "fir-9d913",
+    storageBucket: "fir-9d913.appspot.com",
+    messagingSenderId: "402355579207",
+    appId: "1:402355579207:web:070ee4b50becdf73634462"
 };
 
 // Initialize Firebase
