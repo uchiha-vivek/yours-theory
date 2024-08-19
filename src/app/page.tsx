@@ -2,13 +2,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Card from "@/components/Card";
 import HeroSection from "@/components/HeroSection";
-
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from "react-toastify";
 export default function Home() {
   return (
     <>
       <Navbar />
       <main className="container mx-auto px-4 py-8">
         <HeroSection/>
+        <ToastContainer/>
         {/* Content */}
         <h1 className="text-3xl font-bold mb-8">Recent Topics</h1>
         

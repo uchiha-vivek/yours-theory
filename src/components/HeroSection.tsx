@@ -1,16 +1,29 @@
 "use client"
 
 import { useState } from "react"
-
+import { db } from "@/config/firebase"
+import { collection,addDoc } from "@/config/firebase"
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const HeroSection = () => {
 const[email,setEmail] = useState('')
 const[isSubmitted,setIsSubmitted] = useState(false)
 
-const handleSubmit = (e: React.FormEvent) => {
+const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     
-    setIsSubmitted(true);
+     try{
+     await addDoc(collection(db,"subscribers"),{
+          email:email,
+          subscribedAt:new Date()
+     })
+     toast.success("Thanks for subscribing !")
+     setIsSubmitted(true)
+     }catch(error){
+           console.log("Error adding the document : ",error)
+           toast.error("There was an error in Subscribing , Please try again ")
+     }
   };
 
 
